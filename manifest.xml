@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<App uuid="f4804692-3728-42a7-82c1-11b7fba00ed">
+   <Name>MathML Formula</Name>
+   <Author>Incomedia</Author>
+   <Version>5</Version>
+   <Category>Widgets</Category>
+   <Description l10n-id="general-description">Insert a mathematic formula using MathML.</Description>
+   <MinimumWebSiteX5Version>11.0.2.14</MinimumWebSiteX5Version>
+   <Parameters>
+      <Tab>
+         <Label>Graphics</Label>
+         <Description l10n-id="description">Insert the MathML code you want to show in the WebSite.</Description>
+         <Fields>
+            <Field id="code" type="text">
+               <Label l10n-id="code" position="top">MathML code:</Label>
+               <MultiLine>true</MultiLine>
+               <LinesCount>15</LinesCount>
+               <DefaultValue>
+                  <![CDATA[<math xmlns="http://www.w3.org/1998/Math/MathML">
+   <mrow>
+      <msqrt>
+         <mrow>
+            <mi>a</mi>
+         </mrow>
+      </msqrt>
+      <mo>&CenterDot;</mo>
+      <mroot>
+         <mrow>
+            <mi>b</mi>
+         </mrow>
+         <mrow>
+            <mn>3</mn>
+         </mrow>
+      </mroot>
+   </mrow>
+</math>]]>
+               </DefaultValue>
+            </Field>
+            <Field id="height" type="number">
+               <Label l10n-id="height">Height:</Label>
+               <DefaultValue>50</DefaultValue>
+               <MinValue>1</MinValue>
+               <MaxValue>1000</MaxValue>
+            </Field>
+            <Field type="separator" id="sep1">
+               <Label l10n-id="notes">Notes</Label>
+               <Description l10n-id="notes-description"><![CDATA[Insert only Presentation MathML.
+
+You can create or edit the MathML code using softwares such Amaya, SciWriter or OpenOffice.org.
+
+This application will work only when connected to the Internet.
+                  ]]></Description>
+               <NewPanel>true</NewPanel>
+            </Field>
+         </Fields>
+      </Tab>
+   </Parameters>
+   <Hooks><![CDATA[
+      function GetHeaderContents( type, currentContent ) {
+         var code = "";
+         if ( type == "js" && currentContent.indexOf("MathJax") == -1 ) {
+            // First append the config file
+            code += "<script type=\"text/javascript\" src=\"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script>";
+         }
+         return code;
+      }
+      function GetHeight() {
+         return parameters.height.value;
+      }
+   ]]></Hooks>
+   <PreviewOutput><![CDATA[<style type="text/css">body {background-color: transparent;}</style>]]></PreviewOutput>
+   <Output><![CDATA[<?wsx5
+      var brRegex = new RegExp( "(<br\\s\/>|<br>)", "g" );
+      var content = parameters.code.value
+                     .replace( /&gt;/g, ">" )
+                     .replace( /&lt;/g, "<" )
+                     .replace( /&amp;/g, "&" )
+                     .replace( /&quot;/g, "\"" )
+                     .replace( /&gt;/g, ">" )
+                     .replace( /&lt;/g, "<" )
+                     .replace( /&amp;/g, "&" )
+                     .replace( /&quot;/g, "\"" )
+                     .replace( /\r/g, "" )
+                     .replace( /\n/g, "" )
+                     .replace( brRegex, "" );
+
+      // Add the xml code if not present
+      if ( content.indexOf("<math xmlns=\"http://www.w3.org/1998/Math/MathML\"")) {
+         content = "<math xmlns=\"http://www.w3.org/1998/Math/MathML\">" + content + "</math>";
+      }
+
+      document.write( content );
+   ?>]]>
+   </Output>
+</App>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebsiteX5LanguagesLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Languages>
+		<Language>
+			<Code><![CDATA[DE]]></Code>
+			<Name><![CDATA[German]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>code</Key>
+					<Value><![CDATA[MathML Code:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Fügen Sie den MathML  Presentation Code das Sie in der Webseite anzeigen möchten.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Fügen Sie eine mathematische Formel mit MathML ein.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>height</Key>
+					<Value><![CDATA[Höhe:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes</Key>
+					<Value><![CDATA[Anmerkungen]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes-description</Key>
+					<Value><![CDATA[Fügen Sie nur MathML Presentation Code.
+
+Sie können MathML Code mit Programme wie Amaya, SciWriter oder OpenOffice.org erstellen oder bearbeiten.
+
+Die Formeln werden nur sichtbar sein, wenn Sie auf Internet verbunden sind.]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+		<Language>
+			<Code><![CDATA[EN]]></Code>
+			<Name><![CDATA[English]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>code</Key>
+					<Value><![CDATA[MathML code:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Insert the MathML presentation code you want to show in the WebSite.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Add a math formula using MathML.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>height</Key>
+					<Value><![CDATA[Height:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes</Key>
+					<Value><![CDATA[Notes]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes-description</Key>
+					<Value><![CDATA[Insert only Presentation MathML.
+
+You can create or edit the MathML code using softwares such Amaya, SciWriter or OpenOffice.org.
+
+The formulas are shown only when connected to the Internet.]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+		<Language>
+			<Code><![CDATA[IT]]></Code>
+			<Name><![CDATA[Italian]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>code</Key>
+					<Value><![CDATA[Codice MathML:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Inserisci il codice di presentazione MathML che vuoi mostrare nel sito.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Inserisci una formula matematica usando MathML.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>height</Key>
+					<Value><![CDATA[Altezza:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes</Key>
+					<Value><![CDATA[Note]]></Value>
+				</Localization>
+				<Localization>
+					<Key>notes-description</Key>
+					<Value><![CDATA[Usa solo codice di MathML di presentazione.
+
+Puoi creare o modificare il codice MathML usando software come Amaya, SciWriter o OpenOffice.org.
+
+Le formule matematiche verranno mostrate correttamente solo quando connessi ad Internet.]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+	</Languages>
+</WebsiteX5LanguagesLibrary>
