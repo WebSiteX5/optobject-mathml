@@ -1,5 +1,5 @@
 # MathML - Optional Object for WebSite X5
-Source code of the "MathMl" optional object for WebSite X5.
+Source code of the "MathML" optional object for WebSite X5.
 
 ### Copyright Notice
 Copyright (C) 2015  Incomedia S.r.l.
